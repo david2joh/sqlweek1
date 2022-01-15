@@ -10,11 +10,14 @@ INSERT INTO employees (emp_no , birth_date , first_name, last_name, gender, hire
 SELECT * from employees where emp_no between 100 and 102;
 select * from employees where emp_no = 10023;
 update employees SET first_name = 'Bob' where emp_no = 10023;
-select * from employees where emp_no = 10023; ROLLBACK;
-update employees set hire_date ='2002-01-01' where (last_name like 'P%') OR (first_name like 'P%');
+select * from employees where emp_no = 10023;
+SELECT first_name, last_name , hire_date from employees WHERE (last_name like 'P%') OR (first_name like 'P%');
+UPDATE employees set hire_date ='2002-01-01' where (last_name like 'P%') OR (first_name like 'P%');
+SELECT first_name, last_name , hire_date from employees WHERE (last_name like 'P%') OR (first_name like 'P%');
 select count(1) from employees where emp_no < 10000;
 delete from employees where emp_no < 10000;
 select count(1) from employees where emp_no < 10000;
 select * from employees where emp_no IN (10048 ,10099 , 10234, 20089);
 delete from employees where emp_no IN (10048 ,10099 , 10234, 20089);
 select * from employees where emp_no IN (10048 ,10099 , 10234, 20089);
+rollback; select * from employees;
