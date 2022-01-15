@@ -1,0 +1,43 @@
+Week 1 Research
+
+Prompts
+
+What are wildcards in MySQL? How are they useful?
+
+Wildcards allow pattern matching in searches.
+Wildcards VARY from implementation to implementation.
+For mySQL
+In a SELECT WHERE LIKE 
+% zero or single character
+_ any single character
+
+Examples:If my potential result set was yellow, yelp, yep, yowl
+            ye% matches yellow, yelp , yep
+            ye_ matches yep
+
+
+
+Research all the operators that can be used in a SQL WHERE clause. What do they each do?
+
+() - parathesis         :  change order of operations
+/,*,+,-                 :  Mathmatical operations
+||                      :  Concatination
+= , < , > , <= , >=     :  Equality operations
+[NOT] LIKE , IS 
+[NOT]NULL,  , [NOT] IN  :  Pattern, NULL, and SET comparisons (NOT may be applied)
+BETWEEN                 :  Range comparisons
+!= , <>                 :  NOT equal to
+NOT                     :  Negation
+AND                     :  Logical AND
+OR                      :  Logical OR
+
+
+What is your favorite thing you learned this week?
+
+How to manual install MySQL due to errors with the 
+msi install.  Well maybe not favorite but most useful.
+
+Sources:
+OCA/OCP Oracle Database 11g Guide , Oracle Press, 2010
+https://www.w3schools.com/mysql/mysql_wildcards.asp
+https://www.w3schools.com/sql/sql_wildcards.asp

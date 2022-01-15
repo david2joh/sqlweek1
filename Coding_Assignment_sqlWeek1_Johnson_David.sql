@@ -1,0 +1,20 @@
+show databases;
+use employees;
+show tables;
+select first_name , last_name , birth_date from employees where birth_date < '1965-01-01';
+select first_name , last_name , gender, hire_date from employees where gender = 'F' AND hire_date >= '1991-01-01';
+select first_name , last_name  from employees where last_name LIKE 'f%' LIMIT 50;
+SELECT * from employees where emp_no between 100 and 102;
+INSERT INTO employees (emp_no , birth_date , first_name, last_name, gender, hire_date) VALUES (100, '2001-01-01' , 'Jone', 'Doe' , 'M' , '2021-01-11') ,
+ (101, '2000-12-25', 'Jane' , 'Smith', 'F' , '2021-01-12') , (102 , '2001-02-14' , 'John' , 'Smith' , 'M', (current_date()));
+SELECT * from employees where emp_no between 100 and 102;
+select * from employees where emp_no = 10023;
+update employees SET first_name = 'Bob' where emp_no = 10023;
+select * from employees where emp_no = 10023; ROLLBACK;
+update employees set hire_date ='2002-01-01' where (last_name like 'P%') OR (first_name like 'P%');
+select count(1) from employees where emp_no < 10000;
+delete from employees where emp_no < 10000;
+select count(1) from employees where emp_no < 10000;
+select * from employees where emp_no IN (10048 ,10099 , 10234, 20089);
+delete from employees where emp_no IN (10048 ,10099 , 10234, 20089);
+select * from employees where emp_no IN (10048 ,10099 , 10234, 20089);
